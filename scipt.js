@@ -2,26 +2,20 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 let today = dayjs()
-$('#currentDay').text(today.format('MMM D, YYYY'))
+$('#currentDay').text(today.format('MMM D, YYYY'));
 // trying to grab id of currentDay from html
 
-// var currDate = dayjs().format('YYYY-MM-DD')
-// var time9am = dayjs(currDate + ' 09:00:00');
+// let dayWeek = today.format('[Today is] dddd')
+// $('#currentDay').text(dayWeek)
 
-// dayjs().format("currentDay");
-
-// // make sure to use diff for a conditional
-
-// var hours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
-// $(hours).each( function(i, item){
-//     console.log(item);
-// });
+$('#pastButton').click(function () {
+  alert('is this working')
+})
 
 $(function () {
     
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
-
     // local storage. HINT: What does `this` reference in the click listener
     // function? How can DOM traversal be used to get the "hour-x" id of the
     // time-block containing the button that was clicked? How might the id be
