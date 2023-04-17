@@ -46,7 +46,10 @@ $(function () {
     // useful when saving the description in local storage?
     $('.saveBtn').click(function (e) {
       console.log(e.target.parentNode)
-      alert('is this working 1')
+      console.log($(e.target.parentNode.id).children())
+      
+      // alert('is this working 1')
+
     })
     // Add code to apply the past, present, or future class to each time
     // block by comparing the id to the current hour. HINTS: How can the id
