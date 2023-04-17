@@ -4,4 +4,4 @@ In this project I used jquery JS to dinamically make cards for each hour where y
 
 ![work-day-scheduler](./assets/work%20day%20scheduler.png)
 
-See the live site here [here](https://sarroyo551.github.io/schedule-santi/)
+See the live site [here](https://sarroyo551.github.io/schedule-santi/)
