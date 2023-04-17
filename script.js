@@ -13,15 +13,28 @@ $(function () {
   for (let i = 9; i < 18; i++) {
     let displayHour = i < 13 ? i : i - 12;
     let currentHour = dayjs().format('H')
-    let timeBlock;
+    let timePeriod;
+    let amPm = i < 12 ? 'am' : 'pm';
     if (i < currentHour) {
-      timeBlock = 'past'
+      timePeriod = 'past'
     } else if (i > currentHour) {
-      timeBlock = 'future'
+      timePeriod = 'future'
     } else {
-      timeBlock = 'present'
+      timePeriod = 'present'
     }
-    console.log(i, displayHour, currentHour, timeBlock)
+    console.log(i, displayHour, currentHour, timePeriod)
+
+    let timeBlockDiv = $('<div>')
+    timeBlockDiv.addClass(`row time-block ${timePeriod}`)
+    timeBlockDiv.attr('id', `hour-${displayHour}`)
+
+    timeBlockDiv.html(`<div class="col-2 col-md-1 hour text-center py-3">${displayHour + ' ' + amPm}</div>
+    <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+    <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+      <i class="fas fa-save" aria-hidden="true"></i>
+    </button>`)
+
+    $('#rootDiv').append(timeBlockDiv)
   }
   // Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
