@@ -2,7 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 let today = dayjs()
-$('#currentDay').text(today.format('MMM D, YYYY'));
+$('#currentDay').text(today.format('dddd, MMMM DD, YYYY'));
 // trying to grab id of currentDay from html
 
 // let dayWeek = today.format('[Today is] dddd')
